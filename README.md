@@ -4,7 +4,6 @@ A complete production-ready AI application that analyzes resumes against job des
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.109.0-green.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.31.0-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## 📋 Table of Contents
@@ -40,7 +39,7 @@ A complete production-ready AI application that analyzes resumes against job des
 - **OpenAI GPT Integration**: Advanced natural language understanding
 - **Sentence Transformers**: State-of-the-art embeddings
 - **REST API**: Clean, documented FastAPI backend
-- **Modern UI**: Beautiful Streamlit interface with custom styling
+- **Modern UI**: Beautiful Gradio interface with custom styling
 
 ## 🛠️ Tech Stack
 
@@ -54,7 +53,7 @@ A complete production-ready AI application that analyzes resumes against job des
 - **Pydantic**: Data validation
 
 ### Frontend
-- **Streamlit**: Interactive web interface
+- **Gradio**: Interactive web interface
 - **Custom CSS**: Professional styling
 - **Requests**: API communication
 
@@ -67,7 +66,7 @@ A complete production-ready AI application that analyzes resumes against job des
 
 ```
 ┌─────────────────┐
-│   Streamlit UI  │
+│   Gradio UI  │
 │   (Frontend)    │
 └────────┬────────┘
          │ HTTP
@@ -94,7 +93,7 @@ A complete production-ready AI application that analyzes resumes against job des
 6. Relevant chunks retrieved based on JD similarity
 7. LLM analyzes resume vs JD using retrieved context
 8. Results returned as structured JSON
-9. Streamlit displays formatted results
+9. Gradio displays formatted results
 
 ## 📦 Installation
 
@@ -194,13 +193,13 @@ INFO:     Uvicorn running on http://0.0.0.0:8000
 # Activate virtual environment
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
-# Run Streamlit frontend
-streamlit run frontend/app.py
+# Run Gradio frontend
+python frontend/ui.py
 ```
 
 Expected output:
 ```
-You can now view your Streamlit app in your browser.
+You can now view your Gradio app in your browser.
 Local URL: http://localhost:8501
 Network URL: http://192.168.1.x:8501
 ```
@@ -215,7 +214,7 @@ python -m backend.main
 
 # Terminal 2
 screen -S frontend
-streamlit run frontend/app.py
+Python frontend/ui.py
 
 # Detach with Ctrl+A, D
 ```
@@ -344,8 +343,8 @@ resume_matcher/
 │   ├── rag.py                 # RAG and vector store
 │   └── llm.py                 # OpenAI LLM service
 │
-├── frontend/                   # Frontend Streamlit application
-│   └── app.py                 # Streamlit UI
+├── frontend/                   # Frontend Gradio application
+│   └── ui.py                 # Gradio UI
 │
 ├── data/                       # Data directory (auto-generated)
 │   └── uploaded_resumes/      # Temporary PDF storage
@@ -393,7 +392,7 @@ resume_matcher/
 
 #### Frontend Files
 
-**`frontend/app.py`** (Streamlit UI)
+**`frontend/ui.py`** (Gradio UI)
 - Beautiful custom CSS styling
 - File upload interface
 - API communication
@@ -437,7 +436,7 @@ resume_matcher/
    ```
 
 7. **Results Display**
-   - Streamlit renders beautiful UI
+   - Gradio renders beautiful UI
    - Color-coded skill badges
    - Progress bars for scores
    - Downloadable JSON report
