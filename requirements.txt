@@ -1,0 +1,31 @@
+# Core Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+streamlit==1.31.0
+
+# AI/ML Libraries
+langchain==0.1.6
+langchain-openai==0.0.5
+langchain-community==0.0.20
+openai==1.12.0
+sentence-transformers==2.3.1
+faiss-cpu==1.7.4
+
+# PDF Processing
+pypdf==4.0.1
+PyPDF2==3.0.1
+
+# Data Processing
+pydantic==2.6.0
+pydantic-settings==2.1.0
+numpy==1.26.3
+pandas==2.2.0
+
+# Utilities
+python-dotenv==1.0.0
+python-multipart==0.0.6
+aiofiles==23.2.1
+requests==2.31.0
+
+# Type Hints
+typing-extensions==4.9.0
